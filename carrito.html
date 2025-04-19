@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/carrito.js" defer></script>
+</head>
+<body>
+
+ 
+
+  <h2>Carrito de Compras</h2>
+  <!-- Tarjeta de compra individual -->
+<div id="tarjeta-compra" class="oculto"></div>
+
+  <div id="cart-items"></div>
+
+  <div id="total">
+    <h2>Total: $<span id="total-amount">0.00</span></h2>
+  </div>
+
+  <button id="finalizar-compra">Finalizar Compra</button>
+
+ <div id="compra-exitosa" class="oculto tarjeta-exitosa">
+  <h3>¡Compra exitosa! 🎉</h3>
+  <p>Gracias por tu compra. Estamos preparando tu paquete turístico.</p>
+  <button id="seguir-comprando-exito" class="btn-seguir">Seguir comprando</button>
+</div>
+
+
+  <div id="carrito-vacio" >
+    <h3>Tu carrito está vacío.</h3>
+  </div>
+  <div id="mensaje-error" class="mensaje-error" > </div>
+ 
+
+</body>
+</html>

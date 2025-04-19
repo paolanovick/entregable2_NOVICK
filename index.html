@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Paquetes Turísticos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header class="banner">
+    <img src="images/logo.png" alt="Logo del sitio">
+    
+  </header>
+
+  <section class="oferta-completa">
+  <h1>Paquetes Turísticos</h1>
+  <h2>OFERTA ESPECIAL EN PAQUETES</h2>
+  
+  <div class="ofertas-especiales">
+    <h3><span class="emoji-animado">🔥</span> ¡Elegí entre estos 4 paquetes imperdibles! <span class="emoji-animado">🔥</span></h3>
+  <ul class="lista-paquetes">
+    <li>🏖️ Escapada a la playa</li>
+    <li>🏔️ Aventura en la montaña</li>
+    <li>🌆 Recorrido cultural en la ciudad</li>
+    <li>🛶 Safari en la selva</li>
+  </ul>
+</div>
+</section>
+
+  <section id="busqueda-card" class="card">
+    <div class="card-content">
+      <h2>Buscá tu paquete turístico</h2>
+      <input type="text" id="buscador" placeholder="Escribí el nombre del paquete...">
+      <label for="cantidadPaquetes">Cantidad:</label>
+<input type="number" id="cantidadPaquetes" value="1" min="1" >
+
+      
+      <label for="fechaDesde">Fecha Desde:</label>
+      <input type="date" id="fechaDesde">
+
+      <label for="fechaHasta">Fecha Hasta:</label>
+      <input type="date" id="fechaHasta">
+
+      <button id="buscar-btn">Buscar</button>
+    </div>
+  </section>
+
+  <section id="cards-container"></section>
+  <div id="tarjeta-compra" class="oculto"></div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

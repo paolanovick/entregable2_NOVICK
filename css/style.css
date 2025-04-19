@@ -1,0 +1,535 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(to bottom right, #dbeafe, #e0f2fe, #f8fafc);
+  color: #2c3e50;
+  min-height: 100vh;
+  margin: 0;
+}
+
+
+header {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+   header.banner {
+      height: 4cm;
+      width: 100%;
+      background-color: rgba(188, 193, 236, 0.973); /* semitransparente */
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      color: white;
+    }
+     .banner img {
+      height: 80%;
+      margin-right: 15px;
+      
+    }
+   
+
+
+#busqueda-card {
+  background-color: rgba(240, 248, 255, 0.95);
+  max-width: 500px;
+  margin: 40px auto; /* centrado horizontal */
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid #a0b8fa;
+  text-align: center;
+}
+
+#busqueda-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+   padding: 20px;
+}
+
+#busqueda-card input, 
+#busqueda-card button {
+  border: 1px solid #b0c4de;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 1em;
+   background-color: white;
+}
+
+#busqueda-card h2 {
+  font-size: 1.6em;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+#busqueda-card input,
+#busqueda-card label,
+#busqueda-card button {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  font-size: 1em;
+}
+
+#busqueda-card button {
+  background-color: #4d6efb;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#busqueda-card button:hover {
+    background-color: #354bd3;
+}
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el número de columnas según el espacio disponible */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  padding: 20px;
+}
+/* Estilos para el contenedor de las tarjetas */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;  /* Borde similar al del buscador */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #fff;
+  width: 90%;  /* Ajusta el tamaño de las tarjetas */
+  max-width: 350px;  /* Limita el tamaño máximo */
+  transition: all 0.3s ease;
+}
+#cart-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta las columnas según el tamaño */
+  gap: 20px; /* Espacio entre los productos del carrito */
+  justify-content: center; /* Centra los elementos */
+  padding: 20px;
+}
+
+
+/* Cuando la tarjeta es hover, se agranda ligeramente */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo de la imagen dentro de la tarjeta */
+.card img {
+  width: 100%;
+  height: 200px;  /* Ajusta la altura de la imagen */
+  object-fit: cover;  /* Para que la imagen cubra bien el espacio */
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Título de la tarjeta (nombre del paquete) */
+.card h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;  /* Un color para el texto que contraste */
+}
+
+/* Descripción del paquete */
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Botón "Agregar al carrito" */
+.card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+/* Efecto hover en el botón */
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Botón "Seguir comprando" */
+.btn-seguir {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #f1f1f1;
+  color: #007bff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+/* Hover en el botón "Seguir comprando" */
+.btn-seguir:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+
+.card img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-content h3 {
+  margin: 0 0 50px;
+  justify-content: center;
+}
+
+.card-content p {
+  margin: 5px 0;
+}
+
+.card-content button {
+  padding: 10px;
+   background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-content button:hover {
+   background-color: #21618c
+}
+.oculto {
+  display: none;
+}
+#tarjeta-compra {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;  /* Igual que .card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Igual que .card */
+  background-color: #fff;  /* Igual que .card */
+  width: 90%;
+  max-width: 350px;
+  transition: all 0.3s ease;
+}
+#compra-exitosa {
+  background: linear-gradient(to right, #cceeff, #ccf5ff);
+  border: 2px solid #5dade2;
+  color: #2e86de;
+}
+#tarjeta-compra img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+.oculto {
+    display: none !important;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+.mensaje-error{
+  display: none;
+    color: red;
+  font-weight: bold;
+  margin-top: 10px;
+  background-color: #f8d7da;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+}
+
+.cantidadPaquetes {
+  width: 60px; margin-left: 5px;}
+
+  .btn-seguir {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-seguir:hover {
+  background-color: #218838;
+}
+.btn-volver {
+  background-color: #2d89ef;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #1b5dbf;
+}
+#compra-exitosa {
+  background: linear-gradient(to right, #cceeff, #ccf5ff);
+  border: 2px solid #5dade2; /* Borde verde */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  font-family: 'Arial', sans-serif;
+  color: #2e86de;
+  display: none; /* Oculto al inicio */
+}
+
+#compra-exitosa h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#compra-exitosa p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#seguir-comprando-exito {
+ background: linear-gradient(to right, #cceeff, #ccf5ff);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#seguir-comprando-exito:hover {
+  background: linear-gradient(to right, #cceeff, #ccf5ff);
+}
+
+.tarjeta-exitosa {
+  font-size: 1em;
+  padding: 20px;
+  background-color: #f0f9f0; /* Un verde más suave de fondo */
+  border: 1px solid #d0f0d0; /* Ligeramente más claro */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Más sombra para destacar */
+  text-align: center;
+  display: block;
+}
+
+
+
+.btn-volver {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: #45a049;
+}
+.ofertas-especiales {
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+  border: 3px dashed #d63031;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px auto;
+  text-align: center;
+  max-width: 600px;
+  animation: destello 2s infinite alternate;
+  box-shadow: 0 0 20px #fdcb6e;
+  position: relative;
+  overflow: hidden;
+}
+
+.lista-paquetes {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+  font-size: 1.3em;
+}
+
+.lista-paquetes li {
+  margin: 12px 0;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.lista-paquetes li:hover {
+  transform: scale(1.05);
+  color: #d63031;
+  font-weight: bold;
+}
+
+/* Efecto de destello animado */
+@keyframes destello {
+  0% {
+    box-shadow: 0 0 10px #fdcb6e;
+  }
+  100% {
+    box-shadow: 0 0 35px #fdcb6e;
+  }
+}
+
+/* Animación de emoji */
+.emoji-animado {
+  display: inline-block;
+  animation: saltito 1s infinite;
+}
+
+@keyframes saltito {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.oferta-completa {
+   background: linear-gradient(135deg, #dbeafe, #a0c4ff);
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 20px;
+  max-width: 700px;
+  box-shadow: 0 0 25px rgba(110, 184, 253, 0.8);
+  text-align: center;
+  border: 3px solid #6fa8dc;
+  color: #1b2a49;
+}
+
+.oferta-completa h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.oferta-completa h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+    color: #3b82f6;
+  font-weight: bold;
+}
+
+
+
+.item-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 12px;
+  background-color: #f0f8ff;
+  border: 1px solid #cfe2ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.item-carrito img {
+  height: 60px;
+  width: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.item-detalle {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-detalle span {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.item-detalle small {
+  color: #64748b;
+}
+
+.item-precio {
+  font-weight: bold;
+  color: #2563eb;
+  font-size: 1.2em;
+}
+
+.item-eliminar {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-eliminar:hover {
+  background-color: #dc2626;
+}
+
+#total {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.5em;
+  color: #26408b;
+}
+
+#total span {
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+#finalizar-compra {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background-color: #85abe7;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#finalizar-compra:hover {
+  background-color: #1d4ed8;
+}
